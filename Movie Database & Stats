@@ -1,0 +1,29 @@
+/** movies
+spirited away ($10)
+up ($20)
+fast n furious ($5)
+ratatouille ($10)
+the help ($2)
+insidious ($3)
+nemo ($15)
+EEAAO ($100)
+cars 2 ($1)
+toy story 2 ($6)
+little mermaid ($3)
+beauty and the beast ($16)
+pochahontas ($9)
+the menu ($10)
+the incredibles ($50)
+**/
+CREATE TABLE movies (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, rating INTEGER);
+
+INSERT INTO movies VALUES (1, "spirited away", 10, 9); 
+INSERT INTO movies VALUES (2, "up", 20, 10); 
+INSERT INTO movies VALUES (3, "fast n furious", 5, 4); 
+INSERT INTO movies VALUES (4, "ratatouille", 10, 10);
+INSERT INTO movies VALUES (5, "the help", 2, 10); 
+
+
+SELECT * FROM movies; 
+
+SELECT * FROM movies WHERE price > 5 ORDER BY price ASC; 
