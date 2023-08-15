@@ -61,3 +61,21 @@ ON FEB.orderid=cust.order_id
 WHERE Feb.Quantity>2
 AND length(orderid) = 6 
 AND orderid <> 'Order ID'
+
+
+I am trying to find orders in February that were bought between Feb. 13 - Feb. 18
+SELECT orderdate
+FROM BIT_DB.FebSales
+WHERE orderdate between '02/13/19 00:00' AND '02/18/19 00:00'
+
+I am trying to find a location from Feb. sales that was ordered on Feb. 18 at 1:35 am
+SELECT location
+FROM BIT_DB.FebSales 
+WHERE orderdate = '02/18/19 01:35'
+
+List all the products sold in Los Angeles in February, and include how many of each were sold
+
+SELECT Product, SUM(quantity) 
+FROM BIT_DB.FebSales
+WHERE location like '%Los Angeles%'
+GROUP BY Product
